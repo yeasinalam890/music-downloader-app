@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoundWave - Turbo Multi-Threaded Music Downloader</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-glow"></div>
+  
+  <main class="app-container">
+    <header class="hero-header">
+      <div class="badge">⚡ MAX-POWER TURBO MODE (8X THREADS)</div>
+      <h1>Ultra-Fast Music Downloader</h1>
+      <p class="subtitle">Parallel 8-stream engine optimized for minimum download times and instant packaging.</p>
+    </header>
+
+    <section class="card">
+      <div class="input-group">
+        <div class="input-wrapper">
+          <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+          </svg>
+          <input type="text" id="urlInput" placeholder="Paste Spotify or YouTube link (Track, Album, or Playlist)..." autocomplete="off" />
+          <button id="clearBtn" class="clear-btn hidden" title="Clear input">&times;</button>
+        </div>
+
+        <div class="detection-bar" id="detectionBar">
+          <span class="platform-tag" id="platformTag">Supported: YouTube & Spotify links</span>
+        </div>
+
+        <button id="downloadBtn" class="download-btn">
+          <span class="btn-text">⚡ Turbo Download Now</span>
+          <div class="spinner hidden" id="spinner"></div>
+        </button>
+      </div>
+
+      <div class="status-panel hidden" id="statusPanel">
+        <div class="progress-bar-container">
+          <div class="progress-bar indeterminate" id="progressBar"></div>
+        </div>
+        <p class="status-message" id="statusMessage">Launching 8 concurrent download streams...</p>
+      </div>
+    </section>
+
+    <footer class="footer-features">
+      <div class="feature-item">
+        <span class="feature-icon">🚀</span>
+        <div>
+          <h4>8x Parallel Streams</h4>
+          <p>8 songs fetched simultaneously</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">⚡</span>
+        <div>
+          <h4>Fast 128k Engine</h4>
+          <p>Instant FFmpeg audio encoding</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">📦</span>
+        <div>
+          <h4>Zero-CPU ZIP</h4>
+          <p>Instant playlist compression</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
